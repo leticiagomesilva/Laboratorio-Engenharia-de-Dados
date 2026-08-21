@@ -152,7 +152,7 @@ Resources:
               # true: linha quebrada vira null e a consulta responde.
               # false: uma linha ruim derruba a consulta inteira com HIVE_BAD_DATA.
               # Justifique em DECISOES.md quem paga o que voce escolheu.
-              "ignore.malformed.json": "SEU_VALOR_AQUI"   # <- completar
+              "ignore.malformed.json": "true"   # <- completar
           Columns:
             - Name: corrida_id
               Type: string
@@ -168,9 +168,9 @@ Resources:
             # Justifique em DECISOES.md o que o SELECT devolveu - nao o que
             # voce supos.
             - Name: data_corrida
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: timestamp   # <- completar
             - Name: fim
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: timestamp   # <- completar
             - Name: distancia_km
               Type: double
             - Name: duracao_min
@@ -180,7 +180,7 @@ Resources:
             # manda "17,82", com virgula decimal.
             # Justifique em DECISOES.md o que voce aceita perder.
             - Name: valor
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: double   # <- completar
 
   # 4 - As particoes. Tres das trinta, e a ausencia das outras 27 e conteudo:
   # dado nao catalogado e dado que nao existe para quem pergunta.
