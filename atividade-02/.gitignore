@@ -1,5 +1,9 @@
 .terraform/
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
-terraform.tfvars
+
+# terraform.tfvars NAO entra aqui: o Passo 10 do enunciado exige o arquivo no PR.
+# O que nao pode ser comitado e o terraform.tfstate (e o .backup).
+
+.mypy_cache/
+.DS_Store
