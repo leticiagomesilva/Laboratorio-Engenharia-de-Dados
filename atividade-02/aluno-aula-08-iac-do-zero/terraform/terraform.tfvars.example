@@ -1,0 +1,23 @@
+# =============================================================================
+# MODELO — copie para terraform.tfvars e preencha.
+#   cp terraform.tfvars.example terraform.tfvars
+#
+# terraform.tfvars esta no .gitignore. Para entrega-lo no PR (a rubrica pede),
+# use: git add -f terraform.tfvars
+# =============================================================================
+
+# Sufixo unico dos nomes. So minusculas, numeros e hifen.
+sufixo = "eda-grupo03"
+
+# DECISAO 05 — teto de bytes por consulta no Athena.
+# NAO copie do lab: meça. Aplique com um teto provisorio alto (117455962),
+# rode a consulta larga, leia o "Data scanned", e so entao fixe o numero.
+# Faixa aceita: 10485760 (piso do Athena) a 117455962 (acima disso nao freia).
+# teto_bytes = 0
+
+# DECISAO 04 — quais dias registrar como particao.
+# Minimo 3 pelo criterio, e uma delas precisa ser a de HOJE.
+# Atencao: com ~3,4 MB por dia, 3 particoes varrem ~10,2 MB, que fica ABAIXO
+# do piso de teto do Athena (10485760) — a consulta larga nunca seria barrada.
+# Na pratica, 4 e o minimo que funciona.
+# dias_particao = ["AAAA-MM-DD", "AAAA-MM-DD", "AAAA-MM-DD", "AAAA-MM-DD"]
