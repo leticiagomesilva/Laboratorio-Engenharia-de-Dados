@@ -1,0 +1,16 @@
+turma  = "TURMA-A"
+sufixo = "grupo03"
+
+escopo_prefeitura        = "tabela"
+colunas_ocultas_analista = ["corrida_id", "motorista_id", "passageiro_id"]
+
+contrato_refined = {
+  descricao   = "Resume a quantidade de corridas e a receita entre 00h00 e 05h59 UTC por bairro e dia, sem identificadores de corrida, motorista ou passageiro."
+  dono        = "Engenharia de Dados do Grupo 03"
+  atualizacao = "Atualizada após cada execução bem-sucedida do job refined, com sobrescrita dos dias processados."
+  comentarios = {
+    bairro   = "Bairro associado à corrida."
+    corridas = "Quantidade de corridas únicas iniciadas na madrugada do dia."
+    receita  = "Soma dos valores das corridas da madrugada em reais, arredondada a duas casas decimais."
+  }
+}
