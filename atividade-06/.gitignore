@@ -1,0 +1,8 @@
+# Configura??o local e artefatos do Terraform
+terraform/backend.hcl
+terraform/terraform.tfvars
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+__pycache__/
